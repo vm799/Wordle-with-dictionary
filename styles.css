@@ -49,6 +49,7 @@ justify-content:center;
 .key > svg {
     width:1em;
     height:1em;
+    pointer-events: none;
 }
 
 .key:hover, .key:focus {
@@ -71,6 +72,8 @@ justify-content:center;
     --lightness:43%;
 }
 
+
+
 .guess-grid{
     display: grid;
     justify-content: center;
@@ -81,6 +84,8 @@ justify-content:center;
     gap: .25em;
     margin-bottom: 1em;
 }
+
+
 
 .tile{
     font-size: 2em;
@@ -122,10 +127,12 @@ justify-content:center;
 
 .tile.dance{
     animation: dance 500ms ease-in-out;
+    background: rgb(53,226,7);
+background: linear-gradient(0deg, rgba(53,226,7,1) 0%, rgba(231,220,5,1) 33%, rgba(130,226,7,1) 100%);
 }
 
 .tile.flip {
-    transform: rotateX(90deg);
+    transform: rotateY(90deg);
 }
 
 @keyframes shake {

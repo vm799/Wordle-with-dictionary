@@ -15448,7 +15448,7 @@ return guessGrid.querySelectorAll('[data-state = "active"]')
 }
 
 
-function showAlert(message, duration = 1000){
+function showAlert(message, duration = 2000){
     const alert = document.createElement("div")
     alert.innerText = message
     alert.classList.add("alert")
@@ -15475,10 +15475,11 @@ tiles.forEach(tile =>{
 })
 }
 
-function checkWinLose(guess, tiles) {
+function checkWinLose(guess, tiles, key) {
     if (guess === targetWord) {
         showAlert("You clever sausage!!", 1500)
         danceTiles(tiles)
+       
         stopInteraction()
         return
        
@@ -15497,6 +15498,7 @@ function danceTiles(tiles) {
     tiles.forEach((tile, index) => {
       setTimeout(() => {
         tile.classList.add("dance")
+    
         tile.addEventListener(
           "animationend",
           () => {
