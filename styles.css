@@ -13,6 +13,16 @@ padding: 1em;
 font-size: clamp(.5rem, 2.5vmin, 1.5rem);
 }
 
+h1{
+    background: #1A910B;
+background: linear-gradient(to right, #1A910B 0%, #FFDD00 30%, #FFE600 60%, #03572D 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+margin: auto;
+padding: 1em;
+}
+
 .keyboard{
     display: grid;
     grid-template-columns: repeat(20, minmax(auto, 1.25em));
